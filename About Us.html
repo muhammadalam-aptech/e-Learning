@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-card {
+            background: #fff;
+            max-width: 1000px;
+            width: 90%;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        .content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .text {
+            flex: 1;
+        }
+
+        .text h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .text p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 12px 30px;
+            border: none;
+            background: #667eea;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #5a67d8;
+            transform: scale(1.05);
+        }
+
+        .image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .image img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .message {
+            margin-top: 20px;
+            color: #667eea;
+            font-weight: bold;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="about-card">
+    <h1>About Us</h1>
+    <p class="subtitle">Who we are & what we love to build</p>
+
+    <div class="content">
+        <div class="text">
+            <h2>We Create Digital Experiences</h2>
+            <p>
+                We are a team of creative developers and designers focused on
+                building beautiful, fast, and user-friendly websites and applications.
+            </p>
+            <p>
+                Our goal is simple: deliver clean code, modern design, and
+                meaningful user experiences that make an impact.
+            </p>
+
+            <button onclick="showMessage()">Learn More</button>
+            <div class="message" id="message">
+                🚀 We believe in innovation, creativity, and continuous learning!
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="https://via.placeholder.com/400x350" alt="Our Team">
+        </div>
+    </div>
+</div>
+
+<script>
+    function showMessage() {
+        const msg = document.getElementById("message");
+        msg.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
